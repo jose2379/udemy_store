@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +8,14 @@ export class AppService {
 
   loading: Subject<boolean>;
 
-  constructor() { }
+  constructor() {
+    // this.loading.next(true);
+   }
 
   fireLoader() {
-    // this.loading = Observable.of(true);
+    // this.loading = Observable.apply(true);
   }
   stopLoader() {
-    // this.loading = Observable.og(false);
+    // this.loading = Observable.apply(false);
   }
 }

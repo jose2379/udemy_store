@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  MatToolbarModule
-           } from '@angular/material';
+import {  MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppService } from '../common/app.service';
 
 @NgModule({
   imports: [
@@ -13,8 +13,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [
     FormsModule,
     ReactiveFormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressSpinnerModule
     // MatCardModule
-  ]
+  ],
+  providers: [AppService]
 })
 export class SharedModule { }

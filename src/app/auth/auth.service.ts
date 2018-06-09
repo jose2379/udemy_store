@@ -20,7 +20,7 @@ export class AuthService {
   ) {
     // this.user = this.afAuth.authState.subscribe(user => {
     //   if(user){
-    //     return null;
+    //     return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
     //   } else {
     //     return Observable.arguments(null);
     //   }
